@@ -7,11 +7,7 @@ table = []
  
 turn = 0
  
-while (player1.size > 0) && (player2.size > 0)
-  if turn == 3000
-    puts "It's a tie!"
-    exit
-  end
+while (player1.size > 0) && (player2.size > 0) && (turn < 3000)
   
   puts "\n\nTurn #{turn}:"
   
@@ -51,4 +47,5 @@ while (player1.size > 0) && (player2.size > 0)
   turn += 1
   puts "\n\nPlayer A wins the game!" if player1.length == 52
   puts "\n\nPlayer B wins the game!" if player2.length == 52
+  puts "\n\nIt's a tie!" if turn == 3000
 end
